@@ -1,0 +1,1122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="memoryGame" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Memory Madness" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qqP-gL-5UX">
+                                <rect key="frame" x="32" y="94" width="350" height="113"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="113" id="wpb-i0-hXC"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="350" id="yPR-gF-Iaw"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="40"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H0X-Lp-ITi">
+                                <rect key="frame" x="127" y="677" width="160" height="40"/>
+                                <color key="backgroundColor" red="0.69446243523316065" green="0.086176144406938437" blue="0.060985467931571204" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="160" id="msc-qU-oFH"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="20"/>
+                                <state key="normal" title="Start New Game">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="sdp-N1-FoZ" kind="presentation" id="adD-zC-lL9"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HH7-8K-aYN">
+                                <rect key="frame" x="127" y="747" width="160" height="40"/>
+                                <color key="backgroundColor" red="0.69446243519999995" green="0.086176144410000002" blue="0.060985467930000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="160" id="f4U-5R-5yh"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="20"/>
+                                <state key="normal" title="How To Play">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="1Ad-dT-2oh" kind="presentation" id="p2U-A8-MIH"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Screen Shot 2020-07-13 at 9.47.01 PM" translatesAutoresizingMaskIntoConstraints="NO" id="a2Z-bC-bcz">
+                                <rect key="frame" x="87" y="352" width="240" height="192"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.022716952222614894" green="0.63681994818652843" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="HH7-8K-aYN" secondAttribute="bottom" constant="75" id="AGy-NN-5ic"/>
+                            <constraint firstItem="HH7-8K-aYN" firstAttribute="top" secondItem="H0X-Lp-ITi" secondAttribute="bottom" constant="30" id="CnR-fV-b05"/>
+                            <constraint firstItem="qqP-gL-5UX" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="FKI-rL-5ly"/>
+                            <constraint firstItem="qqP-gL-5UX" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="HyG-z9-Plm"/>
+                            <constraint firstItem="a2Z-bC-bcz" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="QsD-5u-4CQ"/>
+                            <constraint firstItem="H0X-Lp-ITi" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="US4-oG-J9h"/>
+                            <constraint firstItem="a2Z-bC-bcz" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="hpr-rs-xTp"/>
+                            <constraint firstItem="a2Z-bC-bcz" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="87" id="ojS-kD-Wv0"/>
+                            <constraint firstItem="HH7-8K-aYN" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="pXc-Bq-HhZ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="47.826086956521742" y="20.758928571428569"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="gKs-Ye-sLB">
+            <objects>
+                <viewController id="1Ad-dT-2oh" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="bJe-aF-SQV">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How To Play" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dYW-gR-xj4">
+                                <rect key="frame" x="97" y="69" width="220" height="55"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="40"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uqk-y0-4uJ">
+                                <rect key="frame" x="55.333333333333343" y="325" width="303.33333333333326" height="246"/>
+                                <string key="text">Press "Start New Game" and proceed to tap different cards until you find all of the matches. Each card has a match, but you can only look at two cards at a time! The key is to remember the past cards you have chosen, and then you are golden. </string>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v8c-gG-ObI">
+                                <rect key="frame" x="169.66666666666666" y="772" width="75" height="40"/>
+                                <color key="backgroundColor" red="0.70306428109999997" green="0.087243551190000004" blue="0.061740854499999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="75" id="bKR-2N-arB"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="20"/>
+                                <state key="normal" title="Back">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="presentation" id="4Fm-y3-mRm"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.022716952219999999" green="0.63681994819999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="Uqk-y0-4uJ" firstAttribute="centerX" secondItem="bJe-aF-SQV" secondAttribute="centerX" id="5Oe-Ic-03l"/>
+                            <constraint firstItem="v8c-gG-ObI" firstAttribute="centerX" secondItem="bJe-aF-SQV" secondAttribute="centerX" id="5dC-sj-Izt"/>
+                            <constraint firstItem="dYW-gR-xj4" firstAttribute="top" secondItem="M8c-0Y-0HY" secondAttribute="top" constant="25" id="DfL-0L-edf"/>
+                            <constraint firstItem="Uqk-y0-4uJ" firstAttribute="centerY" secondItem="bJe-aF-SQV" secondAttribute="centerY" id="STV-DJ-M7c"/>
+                            <constraint firstItem="M8c-0Y-0HY" firstAttribute="bottom" secondItem="v8c-gG-ObI" secondAttribute="bottom" constant="50" id="W0L-IJ-vYn"/>
+                            <constraint firstItem="dYW-gR-xj4" firstAttribute="centerX" secondItem="bJe-aF-SQV" secondAttribute="centerX" id="gHd-g0-9IZ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="M8c-0Y-0HY"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jh6-qt-RWM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="771" y="21"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="KYz-9B-QjH">
+            <objects>
+                <viewController id="sdp-N1-FoZ" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ojW-d9-Kue">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose Your Difficulty" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jdm-Nh-8s2">
+                                <rect key="frame" x="97" y="69" width="220" height="95.666666666666686"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="35"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QhT-6k-cqg">
+                                <rect key="frame" x="132" y="348" width="150" height="50"/>
+                                <color key="backgroundColor" red="0.70306428109999997" green="0.087243551190000004" blue="0.061740854499999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="Nuf-Ks-xyQ"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="150" id="ffs-4z-3X8"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="30"/>
+                                <state key="normal" title="Easy">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="J8d-zo-HEF" kind="presentation" id="caa-RL-SBw"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B9h-5S-E5K">
+                                <rect key="frame" x="132" y="423" width="150" height="50"/>
+                                <color key="backgroundColor" red="0.70306428109999997" green="0.087243551190000004" blue="0.061740854499999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="150" id="IEy-6K-ifa"/>
+                                    <constraint firstAttribute="height" constant="50" id="gEl-Jd-2lR"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="28"/>
+                                <state key="normal" title="Medium">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="5Fo-Gw-UVk" kind="presentation" id="cAi-E1-xIY"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IOk-Y1-YSj">
+                                <rect key="frame" x="157" y="747" width="100" height="40"/>
+                                <color key="backgroundColor" red="0.70306428109999997" green="0.087243551190000004" blue="0.061740854499999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="7fG-5s-nDc"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="20"/>
+                                <state key="normal" title="Back">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="presentation" id="095-ED-xYT"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fqT-QY-xLd">
+                                <rect key="frame" x="132" y="498" width="150" height="50"/>
+                                <color key="backgroundColor" red="0.70306428109999997" green="0.087243551190000004" blue="0.061740854499999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="itc-CH-f2Y"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="150" id="xiv-tp-fF9"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="30"/>
+                                <state key="normal" title="Hard">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="8kX-bZ-kfm" kind="presentation" id="NKW-zQ-dv7"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.022716952219999999" green="0.63681994819999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="Jdm-Nh-8s2" firstAttribute="top" secondItem="79o-Jt-hVW" secondAttribute="top" constant="25" id="35T-OA-ALZ"/>
+                            <constraint firstItem="QhT-6k-cqg" firstAttribute="centerX" secondItem="ojW-d9-Kue" secondAttribute="centerX" id="3wg-kS-WDL"/>
+                            <constraint firstItem="B9h-5S-E5K" firstAttribute="top" secondItem="QhT-6k-cqg" secondAttribute="bottom" constant="25" id="6gk-tU-U8t"/>
+                            <constraint firstItem="B9h-5S-E5K" firstAttribute="centerX" secondItem="ojW-d9-Kue" secondAttribute="centerX" id="8iS-pn-sJg"/>
+                            <constraint firstItem="fqT-QY-xLd" firstAttribute="centerX" secondItem="ojW-d9-Kue" secondAttribute="centerX" id="Afr-cm-cGB"/>
+                            <constraint firstItem="IOk-Y1-YSj" firstAttribute="centerX" secondItem="ojW-d9-Kue" secondAttribute="centerX" id="JuW-jx-Wbx"/>
+                            <constraint firstItem="fqT-QY-xLd" firstAttribute="top" secondItem="B9h-5S-E5K" secondAttribute="bottom" constant="25" id="So9-4v-Ssb"/>
+                            <constraint firstItem="79o-Jt-hVW" firstAttribute="bottom" secondItem="IOk-Y1-YSj" secondAttribute="bottom" constant="75" id="gdD-cN-ceg"/>
+                            <constraint firstItem="B9h-5S-E5K" firstAttribute="centerY" secondItem="ojW-d9-Kue" secondAttribute="centerY" id="mZ0-V2-9cM"/>
+                            <constraint firstItem="Jdm-Nh-8s2" firstAttribute="centerX" secondItem="ojW-d9-Kue" secondAttribute="centerX" id="n6Z-0J-Vl5"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="79o-Jt-hVW"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xh1-7W-wI1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1542.0289855072465" y="20.758928571428569"/>
+        </scene>
+        <!--Easy View Controller-->
+        <scene sceneID="Eh6-ky-8xM">
+            <objects>
+                <viewController id="J8d-zo-HEF" customClass="easyViewController" customModule="memoryGame" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="LES-bG-zYX">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="mEJ-pc-Uax">
+                                <rect key="frame" x="72" y="310.66666666666669" width="270" height="85"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1sm-AR-8mJ" userLabel="card0">
+                                        <rect key="frame" x="0.0" y="0.0" width="60" height="85"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" relation="lessThanOrEqual" constant="60" id="Ncp-Kj-ZdM"/>
+                                        </constraints>
+                                        <state key="normal" image="back"/>
+                                        <connections>
+                                            <action selector="card0Btn:" destination="J8d-zo-HEF" eventType="touchUpInside" id="7SW-vx-Fa0"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZgP-6T-br2" userLabel="card1">
+                                        <rect key="frame" x="70" y="0.0" width="60" height="85"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" relation="lessThanOrEqual" constant="60" id="L2h-8X-ORv"/>
+                                        </constraints>
+                                        <state key="normal" image="back"/>
+                                        <connections>
+                                            <action selector="card1Btn:" destination="J8d-zo-HEF" eventType="touchUpInside" id="Aqu-da-Pa3"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yNE-TB-avD" userLabel="card2">
+                                        <rect key="frame" x="140" y="0.0" width="60" height="85"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" relation="lessThanOrEqual" constant="60" id="3Yb-pJ-yPq"/>
+                                        </constraints>
+                                        <state key="normal" image="back"/>
+                                        <connections>
+                                            <action selector="card2Btn:" destination="J8d-zo-HEF" eventType="touchUpInside" id="GF8-gw-uFo"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wgm-no-ivn" userLabel="card3">
+                                        <rect key="frame" x="210" y="0.0" width="60" height="85"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" relation="lessThanOrEqual" constant="60" id="oeF-Va-ATW"/>
+                                        </constraints>
+                                        <state key="normal" image="back"/>
+                                        <connections>
+                                            <action selector="card3Btn:" destination="J8d-zo-HEF" eventType="touchUpInside" id="ZSF-37-EXc"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="85" id="ta2-Uk-ZLv" customClass="NSLayoutHelper" customModule="LayoutHelper">
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="iPhone4s">
+                                                <real key="value" value="50"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </constraint>
+                                </constraints>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="cW3-iH-z9E">
+                                <rect key="frame" x="72" y="405.66666666666669" width="270" height="85"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vhr-EA-zdh" userLabel="card4">
+                                        <rect key="frame" x="0.0" y="0.0" width="60" height="85"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" relation="lessThanOrEqual" priority="250" constant="60" id="jqb-AO-xrK"/>
+                                        </constraints>
+                                        <viewLayoutGuide key="safeArea" id="zWm-C0-QQS"/>
+                                        <state key="normal" image="back"/>
+                                        <connections>
+                                            <action selector="card4Btn:" destination="J8d-zo-HEF" eventType="touchUpInside" id="iOz-MH-GFV"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vHN-zn-iw4" userLabel="card5">
+                                        <rect key="frame" x="70" y="0.0" width="60" height="85"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" relation="lessThanOrEqual" constant="60" id="iRe-Ok-jsn"/>
+                                        </constraints>
+                                        <state key="normal" image="back"/>
+                                        <connections>
+                                            <action selector="card5Btn:" destination="J8d-zo-HEF" eventType="touchUpInside" id="Twq-4y-ezl"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="doA-aU-kzB" userLabel="card6">
+                                        <rect key="frame" x="140" y="0.0" width="60" height="85"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="60" id="ct2-GB-YYc"/>
+                                        </constraints>
+                                        <state key="normal" image="back"/>
+                                        <connections>
+                                            <action selector="card6Btn:" destination="J8d-zo-HEF" eventType="touchUpInside" id="bUw-DO-HDt"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p5g-fU-tPo" userLabel="card7">
+                                        <rect key="frame" x="210" y="0.0" width="60" height="85"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" relation="lessThanOrEqual" constant="60" id="Wdn-zC-oqG"/>
+                                        </constraints>
+                                        <state key="normal" image="back"/>
+                                        <connections>
+                                            <action selector="card7Btn:" destination="J8d-zo-HEF" eventType="touchUpInside" id="nmC-RL-OH6"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="85" id="N0Z-OE-Mh3"/>
+                                </constraints>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="k3L-G5-kXq">
+                                <rect key="frame" x="72" y="595.66666666666663" width="270" height="85"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WWB-r6-p5k" userLabel="card12">
+                                        <rect key="frame" x="0.0" y="0.0" width="60" height="85"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" relation="lessThanOrEqual" constant="60" id="I4i-9Y-Ljr"/>
+                                        </constraints>
+                                        <state key="normal" image="back"/>
+                                        <connections>
+                                            <action selector="card12Btn:" destination="J8d-zo-HEF" eventType="touchUpInside" id="lsy-qM-ffo"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CDZ-bZ-Mdd" userLabel="card13">
+                                        <rect key="frame" x="70" y="0.0" width="60" height="85"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" relation="lessThanOrEqual" constant="60" id="4Xm-Bn-caA"/>
+                                        </constraints>
+                                        <state key="normal" image="back"/>
+                                        <connections>
+                                            <action selector="card13Btn:" destination="J8d-zo-HEF" eventType="touchUpInside" id="vAp-Cg-xXe"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GuS-wp-Oge" userLabel="card14">
+                                        <rect key="frame" x="140" y="0.0" width="60" height="85"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" relation="lessThanOrEqual" constant="60" id="uKo-WH-zqv"/>
+                                        </constraints>
+                                        <state key="normal" image="back"/>
+                                        <connections>
+                                            <action selector="card14Btn:" destination="J8d-zo-HEF" eventType="touchUpInside" id="Y3n-OD-EhR"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vou-wv-dQv" userLabel="card15">
+                                        <rect key="frame" x="210" y="0.0" width="60" height="85"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" relation="lessThanOrEqual" constant="60" id="Zo0-LA-sj5"/>
+                                        </constraints>
+                                        <state key="normal" image="back"/>
+                                        <connections>
+                                            <action selector="card15Btn:" destination="J8d-zo-HEF" eventType="touchUpInside" id="hPr-Jx-7xA"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="85" id="Dbr-G9-cNW"/>
+                                </constraints>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="d7E-Pq-ykV">
+                                <rect key="frame" x="72" y="500.66666666666674" width="270" height="85"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TXn-Cy-hnt" userLabel="card8">
+                                        <rect key="frame" x="0.0" y="0.0" width="60" height="85"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" relation="lessThanOrEqual" constant="60" id="16I-W8-o4D"/>
+                                        </constraints>
+                                        <state key="normal" image="back"/>
+                                        <connections>
+                                            <action selector="card8Btn:" destination="J8d-zo-HEF" eventType="touchUpInside" id="AGe-KY-7wJ"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B0d-nh-KwN" userLabel="card9">
+                                        <rect key="frame" x="70" y="0.0" width="60" height="85"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="60" id="ifO-9W-Zvg"/>
+                                        </constraints>
+                                        <state key="normal" image="back"/>
+                                        <connections>
+                                            <action selector="card9Btn:" destination="J8d-zo-HEF" eventType="touchUpInside" id="OV3-kx-A5d"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ea3-yl-4Wj" userLabel="card10">
+                                        <rect key="frame" x="140" y="0.0" width="60" height="85"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="60" id="ZSg-ek-hZD"/>
+                                        </constraints>
+                                        <state key="normal" image="back"/>
+                                        <connections>
+                                            <action selector="card10Btn:" destination="J8d-zo-HEF" eventType="touchUpInside" id="czT-fO-fch"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b1N-lE-gtX" userLabel="card11">
+                                        <rect key="frame" x="210" y="0.0" width="60" height="85"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="60" id="Vjq-06-vij"/>
+                                        </constraints>
+                                        <state key="normal" image="back"/>
+                                        <connections>
+                                            <action selector="card11Btn:" destination="J8d-zo-HEF" eventType="touchUpInside" id="run-aB-N74"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="85" id="Nfn-mt-8PK"/>
+                                </constraints>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=":90" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AVE-SI-ked">
+                                <rect key="frame" x="170.66666666666666" y="212.33333333333334" width="73" height="68.333333333333343"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="50"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HTl-Y8-xLH">
+                                <rect key="frame" x="61.666666666666657" y="247.66666666666663" width="89" height="33"/>
+                                <color key="backgroundColor" red="0.70306428109999997" green="0.087243551190000004" blue="0.061740854499999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="15"/>
+                                <state key="normal" title="Home">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="presentation" id="BBR-fp-yea"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.022716952219999999" green="0.63681994819999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="mEJ-pc-Uax" firstAttribute="top" secondItem="HTl-Y8-xLH" secondAttribute="bottom" constant="30" id="B7O-w5-jJJ"/>
+                            <constraint firstItem="d7E-Pq-ykV" firstAttribute="centerX" secondItem="LES-bG-zYX" secondAttribute="centerX" id="DNj-lB-xh3"/>
+                            <constraint firstItem="cW3-iH-z9E" firstAttribute="centerX" secondItem="LES-bG-zYX" secondAttribute="centerX" id="PB6-VI-GbN"/>
+                            <constraint firstItem="cW3-iH-z9E" firstAttribute="top" secondItem="mEJ-pc-Uax" secondAttribute="bottom" constant="10" id="QXX-Ft-7iY"/>
+                            <constraint firstItem="AVE-SI-ked" firstAttribute="leading" secondItem="HTl-Y8-xLH" secondAttribute="trailing" constant="20" id="U7Z-6d-4Hx"/>
+                            <constraint firstItem="AVE-SI-ked" firstAttribute="centerX" secondItem="LES-bG-zYX" secondAttribute="centerX" id="WbP-Cw-Fob"/>
+                            <constraint firstItem="mEJ-pc-Uax" firstAttribute="top" secondItem="AVE-SI-ked" secondAttribute="bottom" constant="30" id="XYE-oH-vgI"/>
+                            <constraint firstItem="k3L-G5-kXq" firstAttribute="centerX" secondItem="LES-bG-zYX" secondAttribute="centerX" id="Y6p-sr-Bvz"/>
+                            <constraint firstItem="d7E-Pq-ykV" firstAttribute="top" secondItem="cW3-iH-z9E" secondAttribute="bottom" constant="10" id="Yhv-y0-alO"/>
+                            <constraint firstItem="cW3-iH-z9E" firstAttribute="centerY" secondItem="LES-bG-zYX" secondAttribute="centerY" id="eor-R0-3dZ"/>
+                            <constraint firstItem="mEJ-pc-Uax" firstAttribute="centerX" secondItem="LES-bG-zYX" secondAttribute="centerX" id="jzI-aV-Zhz"/>
+                            <constraint firstItem="HTl-Y8-xLH" firstAttribute="leading" secondItem="u8p-NU-QZ8" secondAttribute="leading" constant="61.5" id="kx5-gO-llD"/>
+                            <constraint firstItem="k3L-G5-kXq" firstAttribute="top" secondItem="d7E-Pq-ykV" secondAttribute="bottom" constant="10" id="zAC-mM-VAv"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="u8p-NU-QZ8"/>
+                    </view>
+                    <connections>
+                        <outlet property="timer" destination="AVE-SI-ked" id="Pt1-Ej-gXV"/>
+                        <outletCollection property="cardCollection" destination="1sm-AR-8mJ" collectionClass="NSMutableArray" id="M0X-Um-unv"/>
+                        <outletCollection property="cardCollection" destination="ZgP-6T-br2" collectionClass="NSMutableArray" id="FnU-Nh-LPa"/>
+                        <outletCollection property="cardCollection" destination="yNE-TB-avD" collectionClass="NSMutableArray" id="TiS-hw-6zZ"/>
+                        <outletCollection property="cardCollection" destination="Wgm-no-ivn" collectionClass="NSMutableArray" id="Ngj-SR-4EW"/>
+                        <outletCollection property="cardCollection" destination="vhr-EA-zdh" collectionClass="NSMutableArray" id="CBL-Gx-mWa"/>
+                        <outletCollection property="cardCollection" destination="vHN-zn-iw4" collectionClass="NSMutableArray" id="LUw-QB-lIk"/>
+                        <outletCollection property="cardCollection" destination="doA-aU-kzB" collectionClass="NSMutableArray" id="bXl-Bi-4fw"/>
+                        <outletCollection property="cardCollection" destination="p5g-fU-tPo" collectionClass="NSMutableArray" id="0uG-4J-U6A"/>
+                        <outletCollection property="cardCollection" destination="TXn-Cy-hnt" collectionClass="NSMutableArray" id="D1J-P6-JxH"/>
+                        <outletCollection property="cardCollection" destination="B0d-nh-KwN" collectionClass="NSMutableArray" id="oQb-j4-PvQ"/>
+                        <outletCollection property="cardCollection" destination="ea3-yl-4Wj" collectionClass="NSMutableArray" id="Cp4-eX-GvL"/>
+                        <outletCollection property="cardCollection" destination="b1N-lE-gtX" collectionClass="NSMutableArray" id="l07-AF-szI"/>
+                        <outletCollection property="cardCollection" destination="WWB-r6-p5k" collectionClass="NSMutableArray" id="6Zn-MQ-PAH"/>
+                        <outletCollection property="cardCollection" destination="CDZ-bZ-Mdd" collectionClass="NSMutableArray" id="osq-pT-0f7"/>
+                        <outletCollection property="cardCollection" destination="GuS-wp-Oge" collectionClass="NSMutableArray" id="RKy-Gv-nHB"/>
+                        <outletCollection property="cardCollection" destination="vou-wv-dQv" collectionClass="NSMutableArray" id="zvU-RB-lTo"/>
+                        <segue destination="fQJ-mm-bKi" kind="presentation" identifier="gameOver" id="CCg-8A-Aea"/>
+                        <segue destination="RdT-C2-clQ" kind="presentation" identifier="lost" id="XTN-YI-iPp"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CuF-gB-o1y" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2346.376811594203" y="19.419642857142858"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="tM6-P2-Prg">
+            <objects>
+                <viewController id="fQJ-mm-bKi" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="tR6-Ni-2D1">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Congratulations! Game Over." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KhO-49-iOK">
+                                <rect key="frame" x="131" y="420.66666666666669" width="152.33333333333337" height="54.666666666666686"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VJc-nG-91M">
+                                <rect key="frame" x="169.66666666666666" y="722" width="75" height="40"/>
+                                <color key="backgroundColor" red="0.70306428109999997" green="0.087243551190000004" blue="0.061740854499999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="75" id="FTD-Hb-Rvd"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="20"/>
+                                <state key="normal" title="Home">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="presentation" id="Suv-yU-Vaf"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.022716952219999999" green="0.63681994819999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="FGD-qD-5wF" firstAttribute="bottom" secondItem="VJc-nG-91M" secondAttribute="bottom" constant="100" id="STi-1J-osA"/>
+                            <constraint firstItem="VJc-nG-91M" firstAttribute="centerX" secondItem="tR6-Ni-2D1" secondAttribute="centerX" id="b7b-kW-ybE"/>
+                            <constraint firstItem="KhO-49-iOK" firstAttribute="centerY" secondItem="tR6-Ni-2D1" secondAttribute="centerY" id="bCs-Nl-7Fp"/>
+                            <constraint firstItem="KhO-49-iOK" firstAttribute="centerX" secondItem="tR6-Ni-2D1" secondAttribute="centerX" id="cgj-jt-bHq"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="FGD-qD-5wF"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="C0X-jr-zdi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3148" y="21"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="BDa-gu-f7m">
+            <objects>
+                <viewController id="RdT-C2-clQ" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="wxE-iD-UOU">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You Lost! Game Over :(" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tdb-Fv-uN2">
+                                <rect key="frame" x="101.66666666666669" y="434.66666666666669" width="211" height="27"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ryw-Bf-ixD">
+                                <rect key="frame" x="169.66666666666666" y="722" width="75" height="40"/>
+                                <color key="backgroundColor" red="0.70306428109999997" green="0.087243551190000004" blue="0.061740854499999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="75" id="Fkr-H8-kch"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="20"/>
+                                <state key="normal" title="Home">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="presentation" id="zey-AT-epp"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.022716952219999999" green="0.63681994819999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="ryw-Bf-ixD" firstAttribute="centerX" secondItem="wxE-iD-UOU" secondAttribute="centerX" id="XOj-mK-yqo"/>
+                            <constraint firstItem="tdb-Fv-uN2" firstAttribute="centerX" secondItem="wxE-iD-UOU" secondAttribute="centerX" id="c8M-9s-Dpv"/>
+                            <constraint firstItem="mRg-Os-0rK" firstAttribute="bottom" secondItem="ryw-Bf-ixD" secondAttribute="bottom" constant="100" id="juk-5i-dPy"/>
+                            <constraint firstItem="tdb-Fv-uN2" firstAttribute="centerY" secondItem="wxE-iD-UOU" secondAttribute="centerY" id="uUb-Nh-dAV"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="mRg-Os-0rK"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1Fu-iw-vEm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3914" y="21"/>
+        </scene>
+        <!--Medium View Controller-->
+        <scene sceneID="Xl5-2B-4cP">
+            <objects>
+                <viewController id="5Fo-Gw-UVk" customClass="mediumViewController" customModule="memoryGame" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="9Vu-fy-AlB">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="VvJ-0H-FCT">
+                                <rect key="frame" x="72" y="310.66666666666669" width="270" height="85"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rjG-RP-yEJ" userLabel="card0">
+                                        <rect key="frame" x="0.0" y="0.0" width="60" height="85"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" relation="lessThanOrEqual" constant="60" id="eIx-ig-8FB"/>
+                                        </constraints>
+                                        <state key="normal" image="back"/>
+                                        <connections>
+                                            <action selector="card0Btn:" destination="5Fo-Gw-UVk" eventType="touchUpInside" id="wt1-G7-AFA"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V0o-Za-1ku" userLabel="card1">
+                                        <rect key="frame" x="70" y="0.0" width="60" height="85"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" relation="lessThanOrEqual" constant="60" id="NGZ-oZ-hxK"/>
+                                        </constraints>
+                                        <state key="normal" image="back"/>
+                                        <connections>
+                                            <action selector="card1Btn:" destination="5Fo-Gw-UVk" eventType="touchUpInside" id="kWd-PG-3Gg"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Udo-Qi-OjX" userLabel="card2">
+                                        <rect key="frame" x="140" y="0.0" width="60" height="85"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" relation="lessThanOrEqual" constant="60" id="eJN-Ca-YmX"/>
+                                        </constraints>
+                                        <state key="normal" image="back"/>
+                                        <connections>
+                                            <action selector="card2Btn:" destination="5Fo-Gw-UVk" eventType="touchUpInside" id="AZ6-ur-g8n"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hWT-NK-Hko" userLabel="card3">
+                                        <rect key="frame" x="210" y="0.0" width="60" height="85"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" relation="lessThanOrEqual" constant="60" id="l1f-9w-E2S"/>
+                                        </constraints>
+                                        <state key="normal" image="back"/>
+                                        <connections>
+                                            <action selector="card3Btn:" destination="5Fo-Gw-UVk" eventType="touchUpInside" id="1S6-Hr-SrI"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="85" id="3kt-Fs-2KG"/>
+                                </constraints>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="r9f-Bg-XyU">
+                                <rect key="frame" x="72" y="405.66666666666669" width="270" height="85"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gTY-1I-ARK" userLabel="card4">
+                                        <rect key="frame" x="0.0" y="0.0" width="60" height="85"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" relation="lessThanOrEqual" constant="60" id="8vk-Zh-y4I"/>
+                                        </constraints>
+                                        <state key="normal" image="back"/>
+                                        <connections>
+                                            <action selector="card4Btn:" destination="5Fo-Gw-UVk" eventType="touchUpInside" id="YaK-TX-LHn"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PbV-Jv-cv7" userLabel="card5">
+                                        <rect key="frame" x="70" y="0.0" width="60" height="85"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" relation="lessThanOrEqual" constant="60" id="Gnc-hj-GI0"/>
+                                        </constraints>
+                                        <state key="normal" image="back"/>
+                                        <connections>
+                                            <action selector="card5Btn:" destination="5Fo-Gw-UVk" eventType="touchUpInside" id="bic-ja-WDh"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="slc-jA-72n" userLabel="card6">
+                                        <rect key="frame" x="140" y="0.0" width="60" height="85"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" relation="lessThanOrEqual" constant="60" id="ahg-tM-HOC"/>
+                                        </constraints>
+                                        <state key="normal" image="back"/>
+                                        <connections>
+                                            <action selector="card6Btn:" destination="5Fo-Gw-UVk" eventType="touchUpInside" id="fAq-M0-Jxq"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Ls-ie-Sdq" userLabel="card7">
+                                        <rect key="frame" x="210" y="0.0" width="60" height="85"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" relation="lessThanOrEqual" constant="60" id="Oqz-iE-ZCV"/>
+                                        </constraints>
+                                        <state key="normal" image="back"/>
+                                        <connections>
+                                            <action selector="card7Btn:" destination="5Fo-Gw-UVk" eventType="touchUpInside" id="Y4d-vF-r9S"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="85" id="dsn-Tb-bKc"/>
+                                </constraints>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Og2-f4-3VS">
+                                <rect key="frame" x="72" y="595.66666666666663" width="270" height="85"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GUc-Iw-FY3" userLabel="card12">
+                                        <rect key="frame" x="0.0" y="0.0" width="60" height="85"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" relation="lessThanOrEqual" constant="60" id="U2z-nI-RlD"/>
+                                        </constraints>
+                                        <state key="normal" image="back"/>
+                                        <connections>
+                                            <action selector="card12Btn:" destination="5Fo-Gw-UVk" eventType="touchUpInside" id="vPj-A3-1wW"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r1E-cn-n0C" userLabel="card13">
+                                        <rect key="frame" x="70" y="0.0" width="60" height="85"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" relation="lessThanOrEqual" constant="60" id="VIN-kX-hjX"/>
+                                        </constraints>
+                                        <state key="normal" image="back"/>
+                                        <connections>
+                                            <action selector="card13Btn:" destination="5Fo-Gw-UVk" eventType="touchUpInside" id="azj-gc-uo8"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TmJ-Vr-zkC" userLabel="card14">
+                                        <rect key="frame" x="140" y="0.0" width="60" height="85"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" relation="lessThanOrEqual" constant="60" id="2Qt-W3-m6K"/>
+                                        </constraints>
+                                        <state key="normal" image="back"/>
+                                        <connections>
+                                            <action selector="card14Btn:" destination="5Fo-Gw-UVk" eventType="touchUpInside" id="FdX-sK-wSc"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Yc-Kl-pht" userLabel="card15">
+                                        <rect key="frame" x="210" y="0.0" width="60" height="85"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" relation="lessThanOrEqual" constant="60" id="iMB-PC-AOG"/>
+                                        </constraints>
+                                        <state key="normal" image="back"/>
+                                        <connections>
+                                            <action selector="card15Btn:" destination="5Fo-Gw-UVk" eventType="touchUpInside" id="uU7-WA-fMk"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="85" id="3JB-8x-7Wp"/>
+                                </constraints>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=":60" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B1h-gT-Bcp">
+                                <rect key="frame" x="170.66666666666666" y="212.33333333333334" width="73" height="68.333333333333343"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="50"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="8X7-NY-6IM">
+                                <rect key="frame" x="72" y="500.66666666666674" width="270" height="85"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nqX-Gb-KuL" userLabel="card8">
+                                        <rect key="frame" x="0.0" y="0.0" width="60" height="85"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" relation="lessThanOrEqual" constant="60" id="GNM-Ms-YNZ"/>
+                                        </constraints>
+                                        <state key="normal" image="back"/>
+                                        <connections>
+                                            <action selector="card8Btn:" destination="5Fo-Gw-UVk" eventType="touchUpInside" id="w2z-80-09W"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fq7-I3-NT0" userLabel="card9">
+                                        <rect key="frame" x="70" y="0.0" width="60" height="85"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" relation="lessThanOrEqual" constant="60" id="MzX-Ay-LvH"/>
+                                        </constraints>
+                                        <state key="normal" image="back"/>
+                                        <connections>
+                                            <action selector="card9Btn:" destination="5Fo-Gw-UVk" eventType="touchUpInside" id="8pO-oR-zNE"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IFM-ex-Taf" userLabel="card10">
+                                        <rect key="frame" x="140" y="0.0" width="60" height="85"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" relation="lessThanOrEqual" constant="60" id="Z7g-U1-pgz"/>
+                                        </constraints>
+                                        <state key="normal" image="back"/>
+                                        <connections>
+                                            <action selector="card10Btn:" destination="5Fo-Gw-UVk" eventType="touchUpInside" id="KCa-wO-ddP"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nE5-MQ-eky" userLabel="card11">
+                                        <rect key="frame" x="210" y="0.0" width="60" height="85"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" relation="lessThanOrEqual" constant="60" id="Lkj-QC-Hae"/>
+                                        </constraints>
+                                        <state key="normal" image="back"/>
+                                        <connections>
+                                            <action selector="card11Btn:" destination="5Fo-Gw-UVk" eventType="touchUpInside" id="8uR-gR-qA1"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="85" id="dUm-5Q-obe"/>
+                                </constraints>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I3L-uA-xIt">
+                                <rect key="frame" x="61.666666666666657" y="247.66666666666663" width="89" height="33"/>
+                                <color key="backgroundColor" red="0.70306428109999997" green="0.087243551190000004" blue="0.061740854499999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="15"/>
+                                <state key="normal" title="Home">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="presentation" id="LRe-uZ-2v1"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.022716952219999999" green="0.63681994819999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="B1h-gT-Bcp" firstAttribute="leading" secondItem="I3L-uA-xIt" secondAttribute="trailing" constant="20" id="5AZ-Hy-TcB"/>
+                            <constraint firstItem="VvJ-0H-FCT" firstAttribute="top" secondItem="B1h-gT-Bcp" secondAttribute="bottom" constant="30" id="89U-xB-Z2J"/>
+                            <constraint firstItem="VvJ-0H-FCT" firstAttribute="centerX" secondItem="9Vu-fy-AlB" secondAttribute="centerX" id="FNf-rC-oFm"/>
+                            <constraint firstItem="r9f-Bg-XyU" firstAttribute="centerY" secondItem="9Vu-fy-AlB" secondAttribute="centerY" id="I30-90-Zui"/>
+                            <constraint firstItem="B1h-gT-Bcp" firstAttribute="centerX" secondItem="9Vu-fy-AlB" secondAttribute="centerX" id="JZG-4w-eV6"/>
+                            <constraint firstItem="8X7-NY-6IM" firstAttribute="centerX" secondItem="9Vu-fy-AlB" secondAttribute="centerX" id="Nyl-Mc-vg7"/>
+                            <constraint firstItem="VvJ-0H-FCT" firstAttribute="top" secondItem="I3L-uA-xIt" secondAttribute="bottom" constant="30" id="Q59-8Q-WiF"/>
+                            <constraint firstItem="Og2-f4-3VS" firstAttribute="centerX" secondItem="9Vu-fy-AlB" secondAttribute="centerX" id="Tpa-G1-dNB"/>
+                            <constraint firstItem="8X7-NY-6IM" firstAttribute="top" secondItem="r9f-Bg-XyU" secondAttribute="bottom" constant="10" id="UFw-xb-V4G"/>
+                            <constraint firstItem="r9f-Bg-XyU" firstAttribute="centerX" secondItem="9Vu-fy-AlB" secondAttribute="centerX" id="UgV-sZ-ZHP"/>
+                            <constraint firstItem="B1h-gT-Bcp" firstAttribute="centerX" secondItem="9Vu-fy-AlB" secondAttribute="centerX" id="apU-1h-gPi"/>
+                            <constraint firstItem="Og2-f4-3VS" firstAttribute="top" secondItem="8X7-NY-6IM" secondAttribute="bottom" constant="10" id="kX9-ex-Tp7"/>
+                            <constraint firstItem="I3L-uA-xIt" firstAttribute="leading" secondItem="mPk-Ft-R0e" secondAttribute="leading" constant="61.5" id="lei-Rr-bC5"/>
+                            <constraint firstItem="r9f-Bg-XyU" firstAttribute="top" secondItem="VvJ-0H-FCT" secondAttribute="bottom" constant="10" id="rO8-u2-8Sb"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="mPk-Ft-R0e"/>
+                    </view>
+                    <connections>
+                        <outlet property="timer" destination="B1h-gT-Bcp" id="pYy-RH-KzZ"/>
+                        <outletCollection property="cardCollection" destination="rjG-RP-yEJ" collectionClass="NSMutableArray" id="G2w-Cy-xLo"/>
+                        <outletCollection property="cardCollection" destination="V0o-Za-1ku" collectionClass="NSMutableArray" id="K74-mQ-kOn"/>
+                        <outletCollection property="cardCollection" destination="Udo-Qi-OjX" collectionClass="NSMutableArray" id="vXQ-FW-CNj"/>
+                        <outletCollection property="cardCollection" destination="hWT-NK-Hko" collectionClass="NSMutableArray" id="AoI-RI-f5D"/>
+                        <outletCollection property="cardCollection" destination="gTY-1I-ARK" collectionClass="NSMutableArray" id="H4T-HU-xZW"/>
+                        <outletCollection property="cardCollection" destination="PbV-Jv-cv7" collectionClass="NSMutableArray" id="3xZ-bJ-vVH"/>
+                        <outletCollection property="cardCollection" destination="slc-jA-72n" collectionClass="NSMutableArray" id="jfk-Ab-yT0"/>
+                        <outletCollection property="cardCollection" destination="1Ls-ie-Sdq" collectionClass="NSMutableArray" id="xYM-OT-T8v"/>
+                        <outletCollection property="cardCollection" destination="nqX-Gb-KuL" collectionClass="NSMutableArray" id="moK-yv-Mo6"/>
+                        <outletCollection property="cardCollection" destination="fq7-I3-NT0" collectionClass="NSMutableArray" id="lWR-hz-4QH"/>
+                        <outletCollection property="cardCollection" destination="IFM-ex-Taf" collectionClass="NSMutableArray" id="Xj9-u9-yWg"/>
+                        <outletCollection property="cardCollection" destination="nE5-MQ-eky" collectionClass="NSMutableArray" id="67d-P0-6Bu"/>
+                        <outletCollection property="cardCollection" destination="GUc-Iw-FY3" collectionClass="NSMutableArray" id="c2u-LW-dkb"/>
+                        <outletCollection property="cardCollection" destination="r1E-cn-n0C" collectionClass="NSMutableArray" id="eqU-tO-P2D"/>
+                        <outletCollection property="cardCollection" destination="TmJ-Vr-zkC" collectionClass="NSMutableArray" id="pc6-6M-geb"/>
+                        <outletCollection property="cardCollection" destination="2Yc-Kl-pht" collectionClass="NSMutableArray" id="V2n-9P-q1Y"/>
+                        <segue destination="fQJ-mm-bKi" kind="presentation" identifier="gameOverMed" id="JX3-KT-S9o"/>
+                        <segue destination="RdT-C2-clQ" kind="presentation" identifier="lostMed" id="0fX-zm-aKh"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8ux-8E-tb4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4673.913043478261" y="20.758928571428569"/>
+        </scene>
+        <!--Hard View Controller-->
+        <scene sceneID="k7r-Nj-wHT">
+            <objects>
+                <viewController id="8kX-bZ-kfm" customClass="hardViewController" customModule="memoryGame" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="aA6-u5-ZWk">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="KEG-pp-V7W">
+                                <rect key="frame" x="72" y="310.66666666666669" width="270" height="85"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZCf-1R-n9O" userLabel="card0">
+                                        <rect key="frame" x="0.0" y="0.0" width="60" height="85"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" relation="lessThanOrEqual" constant="60" id="COQ-gR-60P"/>
+                                        </constraints>
+                                        <state key="normal" image="back"/>
+                                        <connections>
+                                            <action selector="card0Btn:" destination="8kX-bZ-kfm" eventType="touchUpInside" id="5Kj-wT-LPR"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="37Z-Ji-WVC" userLabel="card1">
+                                        <rect key="frame" x="70" y="0.0" width="60" height="85"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" relation="lessThanOrEqual" constant="60" id="nHr-t8-Pkt"/>
+                                        </constraints>
+                                        <state key="normal" image="back"/>
+                                        <connections>
+                                            <action selector="card1Btn:" destination="8kX-bZ-kfm" eventType="touchUpInside" id="cXh-7K-IKv"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="unX-fP-fk8" userLabel="card2">
+                                        <rect key="frame" x="140" y="0.0" width="60" height="85"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" relation="lessThanOrEqual" constant="60" id="Tb4-P1-r2z"/>
+                                        </constraints>
+                                        <state key="normal" image="back"/>
+                                        <connections>
+                                            <action selector="card2Btn:" destination="8kX-bZ-kfm" eventType="touchUpInside" id="ccL-5Y-bmO"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6c0-OI-ofu" userLabel="card3">
+                                        <rect key="frame" x="210" y="0.0" width="60" height="85"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" relation="lessThanOrEqual" constant="60" id="bmF-eN-dIq"/>
+                                        </constraints>
+                                        <state key="normal" image="back"/>
+                                        <connections>
+                                            <action selector="card3Btn:" destination="8kX-bZ-kfm" eventType="touchUpInside" id="5i5-k8-oFo"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="85" id="5N9-sY-7aA"/>
+                                </constraints>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="kbB-hi-Vph">
+                                <rect key="frame" x="72" y="405.66666666666669" width="270" height="85"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cdL-Hn-GvS" userLabel="card4">
+                                        <rect key="frame" x="0.0" y="0.0" width="60" height="85"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" relation="lessThanOrEqual" constant="60" id="80O-ka-302"/>
+                                        </constraints>
+                                        <state key="normal" image="back"/>
+                                        <connections>
+                                            <action selector="card4Btn:" destination="8kX-bZ-kfm" eventType="touchUpInside" id="bw3-6U-nqr"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vP9-8o-v0V" userLabel="card5">
+                                        <rect key="frame" x="70" y="0.0" width="60" height="85"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" relation="lessThanOrEqual" constant="60" id="JeV-dT-snE"/>
+                                        </constraints>
+                                        <state key="normal" image="back"/>
+                                        <connections>
+                                            <action selector="card5Btn:" destination="8kX-bZ-kfm" eventType="touchUpInside" id="s9t-TZ-sdz"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="woE-Qv-G1l" userLabel="card6">
+                                        <rect key="frame" x="140" y="0.0" width="60" height="85"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" relation="lessThanOrEqual" constant="60" id="6oR-Jm-GCJ"/>
+                                        </constraints>
+                                        <state key="normal" image="back"/>
+                                        <connections>
+                                            <action selector="card6Btn:" destination="8kX-bZ-kfm" eventType="touchUpInside" id="1Q8-lb-boy"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O8i-E9-bRe" userLabel="card7">
+                                        <rect key="frame" x="210" y="0.0" width="60" height="85"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" relation="lessThanOrEqual" constant="60" id="UWb-qa-szb"/>
+                                        </constraints>
+                                        <state key="normal" image="back"/>
+                                        <connections>
+                                            <action selector="card7Btn:" destination="8kX-bZ-kfm" eventType="touchUpInside" id="Uku-81-eOH"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="85" id="WPk-I0-jLy"/>
+                                </constraints>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="BLy-CE-OY8">
+                                <rect key="frame" x="72" y="595.66666666666663" width="270" height="85"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ksU-GU-8X8" userLabel="card12">
+                                        <rect key="frame" x="0.0" y="0.0" width="60" height="85"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" relation="lessThanOrEqual" constant="60" id="Kja-38-Mpb"/>
+                                        </constraints>
+                                        <state key="normal" image="back"/>
+                                        <connections>
+                                            <action selector="card12Btn:" destination="8kX-bZ-kfm" eventType="touchUpInside" id="AzN-Ag-LxH"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lFF-dv-hd7" userLabel="card13">
+                                        <rect key="frame" x="70" y="0.0" width="60" height="85"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" relation="lessThanOrEqual" constant="60" id="lNp-jd-djY"/>
+                                        </constraints>
+                                        <state key="normal" image="back"/>
+                                        <connections>
+                                            <action selector="card13Btn:" destination="8kX-bZ-kfm" eventType="touchUpInside" id="e8e-J2-URO"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Vk-6i-N6I" userLabel="card14">
+                                        <rect key="frame" x="140" y="0.0" width="60" height="85"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" relation="lessThanOrEqual" constant="60" id="Upl-gk-hYF"/>
+                                        </constraints>
+                                        <state key="normal" image="back"/>
+                                        <connections>
+                                            <action selector="card14Btn:" destination="8kX-bZ-kfm" eventType="touchUpInside" id="9bh-eE-Lq8"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="212-eL-NoZ" userLabel="card15">
+                                        <rect key="frame" x="210" y="0.0" width="60" height="85"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" relation="lessThanOrEqual" constant="60" id="XBC-9c-XqY"/>
+                                        </constraints>
+                                        <state key="normal" image="back"/>
+                                        <connections>
+                                            <action selector="card15Btn:" destination="8kX-bZ-kfm" eventType="touchUpInside" id="xOj-r8-W2B"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="85" id="5hj-gS-3JS"/>
+                                </constraints>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=":45" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7en-Og-yPB">
+                                <rect key="frame" x="170.66666666666666" y="230.66666666666666" width="73" height="49.999999999999972"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="2J8-i3-7KY"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="50"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="NPg-TE-hMq">
+                                <rect key="frame" x="72" y="500.66666666666674" width="270" height="85"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fex-pR-2Qk" userLabel="card8">
+                                        <rect key="frame" x="0.0" y="0.0" width="60" height="85"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" relation="lessThanOrEqual" constant="60" id="14A-el-NE0"/>
+                                        </constraints>
+                                        <state key="normal" image="back"/>
+                                        <connections>
+                                            <action selector="card8Btn:" destination="8kX-bZ-kfm" eventType="touchUpInside" id="mom-3O-NxY"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mV8-4A-9bb" userLabel="card9">
+                                        <rect key="frame" x="70" y="0.0" width="60" height="85"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" relation="lessThanOrEqual" constant="60" id="dvN-A0-NNh"/>
+                                        </constraints>
+                                        <state key="normal" image="back"/>
+                                        <connections>
+                                            <action selector="card9Btn:" destination="8kX-bZ-kfm" eventType="touchUpInside" id="ouK-sq-hXy"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zzJ-5a-olm" userLabel="card10">
+                                        <rect key="frame" x="140" y="0.0" width="60" height="85"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" relation="lessThanOrEqual" constant="60" id="flv-dD-eBn"/>
+                                        </constraints>
+                                        <state key="normal" image="back"/>
+                                        <connections>
+                                            <action selector="card10Btn:" destination="8kX-bZ-kfm" eventType="touchUpInside" id="UIE-tj-m6v"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GAM-AX-oSx" userLabel="card11">
+                                        <rect key="frame" x="210" y="0.0" width="60" height="85"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" relation="lessThanOrEqual" constant="60" id="xI0-Kf-QeO"/>
+                                        </constraints>
+                                        <state key="normal" image="back"/>
+                                        <connections>
+                                            <action selector="card11Btn:" destination="8kX-bZ-kfm" eventType="touchUpInside" id="Eel-Ul-gle"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="85" id="7Xu-9s-Arq"/>
+                                </constraints>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xqz-QF-eFx">
+                                <rect key="frame" x="61.666666666666657" y="247.66666666666663" width="89" height="33"/>
+                                <color key="backgroundColor" red="0.70306428109999997" green="0.087243551190000004" blue="0.061740854499999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="15"/>
+                                <state key="normal" title="Home">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="presentation" id="tLP-5X-K1K"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.022716952219999999" green="0.63681994819999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="kbB-hi-Vph" firstAttribute="top" secondItem="KEG-pp-V7W" secondAttribute="bottom" constant="10" id="0Ve-YL-q1v"/>
+                            <constraint firstItem="7en-Og-yPB" firstAttribute="leading" secondItem="xqz-QF-eFx" secondAttribute="trailing" constant="20" id="2xY-EJ-t3f"/>
+                            <constraint firstItem="KEG-pp-V7W" firstAttribute="top" secondItem="7en-Og-yPB" secondAttribute="bottom" constant="30" id="4eR-uR-Qsh"/>
+                            <constraint firstItem="kbB-hi-Vph" firstAttribute="centerX" secondItem="aA6-u5-ZWk" secondAttribute="centerX" id="Ejt-ky-ZgN"/>
+                            <constraint firstItem="xqz-QF-eFx" firstAttribute="leading" secondItem="5GT-gB-qiL" secondAttribute="leading" constant="61.5" id="MzK-d7-2BF"/>
+                            <constraint firstItem="NPg-TE-hMq" firstAttribute="centerX" secondItem="aA6-u5-ZWk" secondAttribute="centerX" id="PV9-CX-S7u"/>
+                            <constraint firstItem="KEG-pp-V7W" firstAttribute="top" secondItem="xqz-QF-eFx" secondAttribute="bottom" constant="30" id="aSe-t2-3Vz"/>
+                            <constraint firstItem="NPg-TE-hMq" firstAttribute="top" secondItem="kbB-hi-Vph" secondAttribute="bottom" constant="10" id="jIF-Eb-Z5N"/>
+                            <constraint firstItem="kbB-hi-Vph" firstAttribute="centerY" secondItem="aA6-u5-ZWk" secondAttribute="centerY" id="jzg-c8-gFI"/>
+                            <constraint firstItem="BLy-CE-OY8" firstAttribute="centerX" secondItem="aA6-u5-ZWk" secondAttribute="centerX" id="qkv-I7-iUL"/>
+                            <constraint firstItem="BLy-CE-OY8" firstAttribute="top" secondItem="NPg-TE-hMq" secondAttribute="bottom" constant="10" id="qok-0a-DHh"/>
+                            <constraint firstItem="7en-Og-yPB" firstAttribute="centerX" secondItem="aA6-u5-ZWk" secondAttribute="centerX" id="rCe-Qh-7PT"/>
+                            <constraint firstItem="7en-Og-yPB" firstAttribute="centerX" secondItem="aA6-u5-ZWk" secondAttribute="centerX" id="yj6-ef-8wR"/>
+                            <constraint firstItem="KEG-pp-V7W" firstAttribute="centerX" secondItem="aA6-u5-ZWk" secondAttribute="centerX" id="zAV-Id-hdz"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="5GT-gB-qiL"/>
+                    </view>
+                    <connections>
+                        <outlet property="timer" destination="7en-Og-yPB" id="yRq-ug-uQ6"/>
+                        <outletCollection property="cardCollection" destination="ZCf-1R-n9O" collectionClass="NSMutableArray" id="46v-zn-SZg"/>
+                        <outletCollection property="cardCollection" destination="37Z-Ji-WVC" collectionClass="NSMutableArray" id="ays-6f-3ct"/>
+                        <outletCollection property="cardCollection" destination="unX-fP-fk8" collectionClass="NSMutableArray" id="NCe-1X-JZG"/>
+                        <outletCollection property="cardCollection" destination="6c0-OI-ofu" collectionClass="NSMutableArray" id="yP7-3Z-7w5"/>
+                        <outletCollection property="cardCollection" destination="cdL-Hn-GvS" collectionClass="NSMutableArray" id="Kgs-kM-rdz"/>
+                        <outletCollection property="cardCollection" destination="vP9-8o-v0V" collectionClass="NSMutableArray" id="Y6q-zn-pvx"/>
+                        <outletCollection property="cardCollection" destination="woE-Qv-G1l" collectionClass="NSMutableArray" id="msu-FW-0Wu"/>
+                        <outletCollection property="cardCollection" destination="O8i-E9-bRe" collectionClass="NSMutableArray" id="Qfz-q5-gyD"/>
+                        <outletCollection property="cardCollection" destination="Fex-pR-2Qk" collectionClass="NSMutableArray" id="JOH-HN-rVx"/>
+                        <outletCollection property="cardCollection" destination="mV8-4A-9bb" collectionClass="NSMutableArray" id="ENN-q4-rrG"/>
+                        <outletCollection property="cardCollection" destination="zzJ-5a-olm" collectionClass="NSMutableArray" id="QBN-wF-zMI"/>
+                        <outletCollection property="cardCollection" destination="GAM-AX-oSx" collectionClass="NSMutableArray" id="5OS-LQ-xFN"/>
+                        <outletCollection property="cardCollection" destination="ksU-GU-8X8" collectionClass="NSMutableArray" id="a55-KD-kvc"/>
+                        <outletCollection property="cardCollection" destination="lFF-dv-hd7" collectionClass="NSMutableArray" id="QZZ-WF-DVh"/>
+                        <outletCollection property="cardCollection" destination="0Vk-6i-N6I" collectionClass="NSMutableArray" id="Bhk-kn-Lgx"/>
+                        <outletCollection property="cardCollection" destination="212-eL-NoZ" collectionClass="NSMutableArray" id="n1e-Zp-GHD"/>
+                        <segue destination="RdT-C2-clQ" kind="presentation" identifier="lostHard" id="jUe-bD-TKu"/>
+                        <segue destination="fQJ-mm-bKi" kind="presentation" identifier="gameOverHard" id="9r8-8I-eDP"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mp6-AK-d8x" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5417.3913043478269" y="20.758928571428569"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Screen Shot 2020-07-13 at 9.47.01 PM" width="562" height="192"/>
+        <image name="back" width="78" height="134"/>
+    </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="XTN-YI-iPp"/>
+        <segue reference="CCg-8A-Aea"/>
+        <segue reference="BBR-fp-yea"/>
+    </inferredMetricsTieBreakers>
+</document>
