@@ -13,19 +13,23 @@ class easyViewController: UIViewController {
     
     @IBOutlet weak var timer: UILabel!
     var oneUp = false
+    // out of range values
     var numUp = 55
     var cardUp = 16
+    // so the user doesn't click a card when it's changing
     var processing = false
     var done = Array<Bool>(repeating: false, count: 16)
     var score = 8
 
     @IBOutlet var cardCollection: Array<UIButton>?
 
+    // when a match isn't made, change pic not activated in main fcn to back
     func changeSecondPic(_ cardNum: Int) {
         let image = UIImage(named: "back")
         cardCollection![cardNum].setImage(image, for: UIControl.State.normal)
     }
 
+    // when match is made, hide the card not activated in the main function
     func hideSecond(_ cardNum: Int) {
         score -= 1
         let image = UIImage(named: "done")
@@ -38,11 +42,13 @@ class easyViewController: UIViewController {
     }
 
     func cardBtn(_ cardNum: Int) {
+        // if user clicks a card while another match
+        // is processed or if that match has been made
         if (processing || done[cardNum]) {
             return
         }
+        // first card picked in a pair
         if (!oneUp) {
-            
             let image = UIImage(named: "\(nums[cardNum])")
             cardCollection![cardNum].setImage(image, for: UIControl.State.normal)
             oneUp = true
@@ -50,6 +56,7 @@ class easyViewController: UIViewController {
             cardUp = cardNum
         }
         else {
+            // this is when a match has been made
             if (numUp == nums[cardNum] && cardUp != cardNum) {
                 done[cardNum] = true
                 let cardImg = UIImage(named: "\(nums[cardNum])")
@@ -66,9 +73,11 @@ class easyViewController: UIViewController {
                     self.processing = false
                 }
             }
+                // if clicked same card twice
             else if (cardUp == cardNum) {
                 return
             }
+                // when a match isn't made and there is already a card up
             else {
                 processing = true
                 let image = UIImage(named: "\(nums[cardNum])")
@@ -139,7 +148,9 @@ class easyViewController: UIViewController {
     var time = 90
     override func viewDidLoad() {
         super.viewDidLoad()
+        // count down the timer
         Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(update), userInfo: nil, repeats: true)
+        // creating the select deck for this game
         for n in 0...7 {
             var found = false
             while (!found) {
@@ -165,6 +176,7 @@ class easyViewController: UIViewController {
 
         // Do any additional setup after loading the view.
     }
+    // count down timer
     @objc func update() {
         if (time > 0) {
             timer.text = ":\(time)"

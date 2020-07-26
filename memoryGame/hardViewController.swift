@@ -20,11 +20,13 @@ class hardViewController: UIViewController {
     
     @IBOutlet var cardCollection: Array<UIButton>?
     
+    // when a match isn't made, flip the first card over to the back
     func changeSecondPic(_ cardNum: Int) {
         let image = UIImage(named: "back")
         cardCollection![cardNum].setImage(image, for: UIControl.State.normal)
     }
     
+    // when a match is made, grey out the first card that was up
     func hideSecond(_ cardNum: Int) {
         score -= 1
         let image = UIImage(named: "done")
@@ -37,9 +39,11 @@ class hardViewController: UIViewController {
     }
     
     func cardBtn(_ cardNum: Int) {
+        // if the user clicks on a card while a match is processing
         if (processing || done[cardNum]) {
             return
         }
+        // if no cards are up yet and the user clicks on one
         if (!oneUp) {
             let image = UIImage(named: "\(nums[cardNum])")
             cardCollection![cardNum].setImage(image, for: UIControl.State.normal)
@@ -48,6 +52,7 @@ class hardViewController: UIViewController {
             cardUp = cardNum
         }
         else {
+            // when a match is made
             if (numUp == nums[cardNum] && cardUp != cardNum) {
                 done[cardNum] = true
                 let cardImg = UIImage(named: "\(nums[cardNum])")
@@ -63,9 +68,11 @@ class hardViewController: UIViewController {
                     self.processing = false
                 }
             }
+                // if user clicks the same card as the upcard
             else if (cardUp == cardNum) {
                 return
             }
+                // if user clicks on a second card and it isn't a match
             else {
                 processing = true
                 let image = UIImage(named: "\(nums[cardNum])")
@@ -138,6 +145,7 @@ class hardViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(update), userInfo: nil, repeats: true)
+        // creating the deck of cards by generating random ints
         for n in 0...7 {
             var found = false
             while (!found) {
@@ -163,6 +171,7 @@ class hardViewController: UIViewController {
         
         // Do any additional setup after loading the view.
     }
+    // countdown timer
     @objc func update() {
         if (time > 0) {
             timer.text = ":\(time)"

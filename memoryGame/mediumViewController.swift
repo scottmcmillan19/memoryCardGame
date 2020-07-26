@@ -20,11 +20,13 @@ class mediumViewController: UIViewController {
     
     @IBOutlet var cardCollection: Array<UIButton>?
     
+    // when a match isn't made, the first card up needs to be flipped over
     func changeSecondPic(_ cardNum: Int) {
         let image = UIImage(named: "back")
         cardCollection![cardNum].setImage(image, for: UIControl.State.normal)
     }
     
+    // when a match is made, the first card up needs to be grayed out
     func hideSecond(_ cardNum: Int) {
         score -= 1
         let image = UIImage(named: "done")
@@ -37,9 +39,11 @@ class mediumViewController: UIViewController {
     }
     
     func cardBtn(_ cardNum: Int) {
+        // this is for when user clicks a card when a card is being flipped or processed
         if (processing || done[cardNum]) {
             return
         }
+        // when zero cards are up
         if (!oneUp) {
             let image = UIImage(named: "\(nums[cardNum])")
             cardCollection![cardNum].setImage(image, for: UIControl.State.normal)
@@ -48,6 +52,7 @@ class mediumViewController: UIViewController {
             cardUp = cardNum
         }
         else {
+            // when a match is made
             if (numUp == nums[cardNum] && cardUp != cardNum) {
                 done[cardNum] = true
                 let cardImg = UIImage(named: "\(nums[cardNum])")
@@ -63,9 +68,11 @@ class mediumViewController: UIViewController {
                     self.processing = false
                 }
             }
+                // when user clicks same card as upcard
             else if (cardUp == cardNum) {
                 return
             }
+                // when one is already up and the second one isn't a match
             else {
                 processing = true
                 let image = UIImage(named: "\(nums[cardNum])")
@@ -137,6 +144,7 @@ class mediumViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(update), userInfo: nil, repeats: true)
+        // creating the deck by generating random ints
         for n in 0...7 {
             var found = false
             while (!found) {
@@ -162,6 +170,7 @@ class mediumViewController: UIViewController {
         
         // Do any additional setup after loading the view.
     }
+    // count down the timer
     @objc func update() {
         if (time > 0) {
             timer.text = ":\(time)"
